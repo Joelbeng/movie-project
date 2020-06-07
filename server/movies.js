@@ -1,5 +1,3 @@
-const path = require("path");
-const fs = require("fs");
 const mongodb = require("mongodb");
 const mongoURL = "mongodb+srv://admin:admin@cluster0-4a4p0.mongodb.net/test";
 
@@ -86,6 +84,5 @@ const getSortedMovies = (sortCategory, movieList, cbResult) => {
 
 		cbResult(orderedList);
 }
-
 
 module.exports = { getAllMovies , getMovieById, getSortedMovies };
