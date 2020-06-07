@@ -1,0 +1,18 @@
+{{#if movie}}
+<div class="detail container">
+  <div class="img-detail-container">
+    <img src="/img/{{movie.cover}}"> 
+  </div>
+  <div class="description">
+      <ul>
+        <li><span>Título:</span>{{movie.title}}</li>
+        <li><span>Año:</span> {{movie.year}}</li>
+        <li><span>Director:</span> {{movie.director}}</li>
+        <li><span>Casting:</span> {{movie.topCast}}</li>
+        <li><a href="{{movie.IMDB}}" target="_blank">Ver más sobre esta película en IMDB</a></li>
+      </ul>
+  </div>
+</div>
+{{else}}
+<h2>No se puede acceder a esta película por ahora, regrese después</h2>
+{{/if}}
