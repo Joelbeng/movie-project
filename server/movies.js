@@ -3,8 +3,6 @@ const fs = require("fs");
 const mongodb = require("mongodb");
 const mongoURL = "mongodb+srv://admin:admin@cluster0-4a4p0.mongodb.net/test";
 
-
-
 const getAllMovies = (cbResult) => {
 	mongodb.MongoClient.connect(mongoURL , { useUnifiedTopology: true },(error, client) => {
 		if (error) {	
@@ -29,7 +27,6 @@ const getAllMovies = (cbResult) => {
 }
 
 const getMovieById = (filteredId, cbResult) => {
-	console.log(filteredId);
 	mongodb.MongoClient.connect( mongoURL,{ useUnifiedTopology: true }, (err, client) => {
 		if (err) {
 			cbResult(undefined);

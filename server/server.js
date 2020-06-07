@@ -25,7 +25,7 @@ app.get("/movie-list", (req, res) => {
 		if (movieList) {
 			res.render("movie-list", {movies: movieList});
 		} else {
-			res.render("error",({msg:"En este momento no se puede consultar las películas, intenté nuevamente más tarde"}));
+				res.render("error",({msg:"En este momento no se puede consultar las películas, intenté nuevamente más tarde"}));
 		}
 	});
 });
