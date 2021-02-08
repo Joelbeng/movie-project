@@ -1,7 +1,7 @@
-Instalacion
+### Instalacion
 
 1. Clonar el repositorio
-2. Ingresar en la terminal desde la nueva ubicación:
+2. Ingresar en la terminal:
 ```
 npm install
 npm start
