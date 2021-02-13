@@ -1,3 +1,16 @@
+### Pre-Requisito 
+* Tener instalado Node
+
+### Instalacion
+
+1. Clonar el repositorio
+2. Ingresar en la terminal:
+```
+npm install
+npm start
+```
+
+
 ### Consigna
 Crear un sitio sencillo de películas usando handlebars :handlebars: , similar a lo que estuvimos haciendo, que consista de 3 vistas:
 ​
