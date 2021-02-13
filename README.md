@@ -1,5 +1,5 @@
 ### Requisito
-. Tener instalado Node
+* Tener instalado Node
 
 ### Instalacion
 
