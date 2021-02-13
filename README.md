@@ -1,5 +1,9 @@
 ## Peliculandia
 
+![Vista general](https://user-images.githubusercontent.com/43142322/107861303-ca303600-6e23-11eb-96e5-fd5afbfae321.png)
+
+![vista detalle](https://user-images.githubusercontent.com/43142322/107861305-cd2b2680-6e23-11eb-9f0a-bc5987983592.png)
+
 ### Pre-Requisito 
 * Tener instalado Node
 
