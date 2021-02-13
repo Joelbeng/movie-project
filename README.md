@@ -1,4 +1,4 @@
-### Requisito
+### Pre-Requisito 
 * Tener instalado Node
 
 ### Instalacion
