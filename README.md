@@ -1,4 +1,4 @@
-## Sitio de películas
+## Peliculandia
 
 ### Pre-Requisito 
 * Tener instalado Node
