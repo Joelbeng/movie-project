@@ -1,3 +1,6 @@
+### Requisito
+. Tener instalado Node
+
 ### Instalacion
 
 1. Clonar el repositorio
