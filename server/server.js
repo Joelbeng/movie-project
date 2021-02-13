@@ -30,37 +30,35 @@ app.get("/movie-list", (req, res) => {
 	});
 });
 
-//get de la lista ordenada
+// get de la lista ordenada
 app.get("/movie-list/:sort", (req, res) => {
 	movies.getAllMovies(movieList => {
 		if (movieList) {
-			movies.getSortedMovies(req.params.sort, movieList, orderedList => {
-				
-				//Realizo un if para cada tipo de ordenamiento, porque tengo que diferenciar los sort así los mando a la vista "movie-list".
+			movies.getSortedMovies(req.params.sort, movieList, orderedList => {				
+				switch (req.params.sort) {
+					case "sort-by-name-asc":
+						res.render("movie-list", {movies: orderedList, sortByNameAsc:"sortByNameAsc"});
+						break;
 
-				if (req.params.sort == "sort-by-name-asc"){
-					res.render("movie-list", {movies: orderedList, sortByNameAsc:"sortByNameAsc"});
-					return;
-				}
+					case "sort-by-name-desc":
+						res.render("movie-list", {movies: orderedList, sortByNameDesc:"sortByNameDesc"});
+						break;
 
-				if (req.params.sort == "sort-by-name-desc"){
-					res.render("movie-list", {movies: orderedList, sortByNameDesc:"sortByNameDesc"});
-					return;
-				}
+					case "sort-by-year-asc":
+						res.render("movie-list", {movies: orderedList, sortByYearAsc:"sortByYearAsc"});
+						break;
 
-				if (req.params.sort == "sort-by-year-asc"){
-					res.render("movie-list", {movies: orderedList, sortByYearAsc:"sortByYearAsc"});
-					return;
-				}
-
-				if (req.params.sort == "sort-by-year-desc"){
-					res.render("movie-list", { movies: orderedList, sortByYearDesc:"sortByYearDesc" });
-					return;
+					case "sort-by-year-desc":
+						res.render("movie-list", {movies: orderedList, sortByYearAsc:"sortByYearDesc"});
+						break;
+						
+					default:
+						res.render("error", {msg:"En este momento no se puede realizar lo solicitado. Intente nuevamente más tarde por favor." });			
+						break;
 				}
 			});
-
 		} else {
-				res.render("error", { msg:"En este momento no se puede realizar la consulta las películas, intenté nuevamente más tarde por favor." });
+			res.render("error", {msg:"En este momento no se puede realizar lo solicitado. Intente nuevamente más tarde por favor." });
 		}
 	});
 });
@@ -71,11 +69,11 @@ app.get("/movie-detail/:id", (req, res) => {
 		if (movie) {
 			res.render("movie-detail", { movie });
 		} else {
-				res.render("error", {msg:"En este momento no se puede consultar los datos de esta película, intente nuevamente más tarde por favor." })
+				res.render("error", {msg:"En este momento no se puede consultar los datos de esta película. Intente nuevamente más tarde por favor." })
 		}
 	});
 });
 
 app.listen(4000, () => {
-	console.log("Server iniciado en el puerto 4000");
+	console.log("Server iniciado en:'localhost:4000'");
 });

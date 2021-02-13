@@ -9,6 +9,7 @@ body {
   color:rgb(216, 215, 215);
   position: relative;
   min-height: 100vh;
+  padding-bottom:3em;
 }
 
 .container {
