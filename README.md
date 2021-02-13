@@ -7,7 +7,7 @@
 ### Pre-Requisito 
 * Tener instalado Node
 
-### Instalacion
+### Instalación
 
 1. Clonar el repositorio
 2. Ingresar en la terminal:
